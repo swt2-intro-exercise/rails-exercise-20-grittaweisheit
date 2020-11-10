@@ -13,6 +13,8 @@ describe "Authors index page", type: :feature do
     expect(page).to have_text("Alan Turing")
     expect(page).to have_text("Paul Turing")
     expect(page).to have_link("http://wikipedia.de/Alan_Turing")
+    expect(page).to have_link("Show", href: author_path(@author1))
+    expect(page).to have_link("Show", href: author_path(@author2))
     expect(page).to have_link 'New', href: new_author_path
   end
 end
